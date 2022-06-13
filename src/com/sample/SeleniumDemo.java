@@ -15,6 +15,10 @@ public class SeleniumDemo {
        System.out.println(wd.getTitle());
        System.out.println("######################################################################################");
        //System.out.println(wd.getPageSource());
+       wd.navigate().to("http://www.msn.com");
+       wd.navigate().back();
+       wd.navigate().to("http://www.amazon.in");
+       wd.close();
    }
        
     }
@@ -44,4 +48,4 @@ public class SeleniumDemo {
     *   }
     * */
     
-}
+
