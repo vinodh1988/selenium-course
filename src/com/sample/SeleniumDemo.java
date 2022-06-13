@@ -11,6 +11,37 @@ public class SeleniumDemo {
 	   System.setProperty("webdriver.chrome.driver", "E:/selenium/chromedriver.exe");
        WebDriver wd=new ChromeDriver();
        wd.get("http://www.google.co.in");
+       System.out.println(wd.getCurrentUrl());
+       System.out.println(wd.getTitle());
+       System.out.println("######################################################################################");
+       //System.out.println(wd.getPageSource());
+   }
        
     }
+   
+   /*
+    * WebDriver -interface
+    * ChromeDriver -implementation
+    * 
+    * interface is a collection of unimplemented methods which would
+    * generally implemented classess
+    * 
+    * interface cannot have objects
+    * 
+    * interface can have reference variables
+    * 
+    * interface reference variable can hold object of class which
+    * is implementing the interface
+    * 
+    * Methods & variables are classified into two types
+    *   1. non static [instance]
+    *   2. static [class]
+    *   
+    *   class A{
+    *     int a; //for each object seperate copy of a is created [non static]/instance
+    *     static int b; //for all the objects only one copy b will be created
+    *              //static members can be called by using class name itself
+    *   }
+    * */
+    
 }
