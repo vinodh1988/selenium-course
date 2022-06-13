@@ -12,6 +12,8 @@ public class Activity {
 	    WebElement element =	wd.findElement(By.name("q"));
 	    element.sendKeys("India");
 	    element.sendKeys(Keys.RETURN);
+	    wd.findElement(By.cssSelector("#rso > div:nth-child(3) > div > div > div.FCIUXc > div > div.yuRUbf > a")).click();
+	   
 	   
 	}
 }
