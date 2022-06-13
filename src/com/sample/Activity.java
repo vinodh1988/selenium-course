@@ -10,10 +10,16 @@ public class Activity {
 		WebDriver wd = DriverProvider.getDriver();
 		wd.get("http://google.co.in");
 	    WebElement element =	wd.findElement(By.name("q"));
-	    element.sendKeys("India");
-	    element.sendKeys(Keys.RETURN);
-	    wd.findElement(By.cssSelector("#rso > div:nth-child(3) > div > div > div.FCIUXc > div > div.yuRUbf > a")).click();
-	   
+	    String n[]= {"India","China","Japan","Pakistan","Thailand"};
+	    for(String x:n) {
+	    element =	wd.findElement(By.name("q"));
+	        element.clear();
+	    	element.sendKeys(x);
+	    	element.sendKeys(Keys.RETURN);
+	  
+	    			wd.findElement(By.xpath("/html/body/div[7]/div/div[10]/div[1]/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/div[1]/a/h3")).click();
+	    	wd.navigate().back();
+	    }  
 	   
 	}
 }
