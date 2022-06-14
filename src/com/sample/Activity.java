@@ -13,12 +13,13 @@ public class Activity {
 	    String n[]= {"India","China","Japan","Pakistan","Thailand"};
 	    for(String x:n) {
 	    element =	wd.findElement(By.name("q"));
-	        element.clear();
+	      
 	    	element.sendKeys(x);
 	    	element.sendKeys(Keys.RETURN);
 	  
-	    			wd.findElement(By.xpath("/html/body/div[7]/div/div[10]/div[1]/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/div[1]/a/h3")).click();
+	    			wd.findElement(By.xpath("/html/body/div[7]/div/div[10]/div[1]/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/div[1]/a")).click();
 	    	wd.navigate().back();
+	    	wd.findElement(By.name("q")).clear();
 	    }  
 	   
 	}
