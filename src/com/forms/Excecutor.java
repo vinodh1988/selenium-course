@@ -4,7 +4,9 @@ import java.util.Hashtable;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -33,5 +35,9 @@ public class Excecutor {
 	  //Thread.sleep(5000);
 	  wd.findElement(By.name("button")).click(); 
 	  
+	  WebElement web = wd.findElement(By.linkText("Download complete book"));
+	  
+	  JavascriptExecutor js=(JavascriptExecutor)wd;
+	  js.executeScript("arguments[0].click()", web);
    }
 }
