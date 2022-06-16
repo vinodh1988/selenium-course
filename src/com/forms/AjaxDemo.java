@@ -15,6 +15,8 @@ public class AjaxDemo {
 	  wd.get("http://data.worldbank.org/");
 	  wd.findElement(By.id("selector")).sendKeys("India");
 	  WebDriverWait wait=new WebDriverWait(wd,Duration.ofSeconds(60));
+	  
+	  
 	  String cssSelector=".highlighted-selection > div:nth-child(1) > b:nth-child(1)";
 	  wait.until(ExpectedConditions.elementToBeClickable(
 	  By.cssSelector(cssSelector)));
