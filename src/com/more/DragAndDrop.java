@@ -15,22 +15,10 @@ public class DragAndDrop {
 		  wd.get("https://the-internet.herokuapp.com/drag_and_drop");
 		  WebElement source = wd.findElement(By.id("column-a"));
 		  WebElement destination = wd.findElement(By.id("column-b"));
-		  int x=destination.getLocation().x;
-		  int x1=source.getLocation().x;
-		  int y=destination.getLocation().y;
-		  System.out.println(x+" "+y);
 		  Actions action=new Actions(wd);
-	  //    action.dragAndDropBy(source,x1-x,y);
-		  action.moveToElement(source)
-		    .pause(Duration.ofSeconds(1))
-		    .clickAndHold(source)
-		    .pause(Duration.ofSeconds(1))
-		    .moveByOffset(x, y)
-		    .moveToElement(destination)
-		    .moveByOffset(x,y)
-		    .pause(Duration.ofSeconds(2))
-		    .release().build().perform();
-	      System.out.println("Dragged and dropped");
+		  action.pause(Duration.ofSeconds(2));
+		  action.dragAndDrop(source, destination).build().perform();
+		  action.pause(Duration.ofSeconds(2));
    }
    
 }
