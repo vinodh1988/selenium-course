@@ -14,5 +14,6 @@ public class FileUploadDemo {
 	   wd.findElement(By.xpath("/html/body/div[4]/div[3]/div[1]/div/div/div/button"))
 	   .click();
 	   Runtime.getRuntime().exec("e:\\scripts\\script.exe");
+	   
    }
 }
